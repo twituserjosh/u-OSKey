@@ -1,4 +1,4 @@
-u\OSKey
+# u\OSKey
 Batch File that pulls Windows OS Product-Keys from:
 -Windows 7
 -Windows 8
