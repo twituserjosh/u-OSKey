@@ -15,4 +15,4 @@ How to use:
 
 Ideally Save & run this off a flash drive in a folder named "OSKey" where the .bat and .txt file will be saved together!
 
-![How PKs are stored](https://i.imgur.com/DehPnm5.png)
+![How PKs are stored](https://i.imgur.com/0ssEjYh.png)
