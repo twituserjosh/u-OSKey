@@ -44,17 +44,17 @@ if NOT [%key%]==[] (
   echo %key% >> %~dp0\ProductKeys.txt 
   ) else (
   echo.
-  echo ERROR: BATCH EXPORT NOT SUPPORTED >> %~dp0\%v%.txt
+  echo ERROR: EXPORT FAILED >> %~dp0\%v%.txt
   color 0c
-  echo ERROR: BATCH EXPORT NOT SUPPORTED
+  echo ERROR: EXPORT FAILED
   )
 echo. >> %~dp0\ProductKeys.txt
 if %loadnum% == 1 set/a loadnum=0 & set load=2
-systeminfo | findstr /B /C:"OS Name" /C:"OS Version" >> %~dp0\ProductKeys.txt
+systeminfo | findstr /B /C:"OS Name" /C:"OS Version" /C:"Host Name" >> %~dp0\ProductKeys.txt
 echo. >> %~dp0\ProductKeys.txt
 echo Status:  Bound [] Unbound [X] >> %~dp0\ProductKeys.txt
 echo. >> %~dp0\ProductKeys.txt
-echo -------------------------------------------------------- >> %~dp0\ProductKeys.txt
+echo ------------------------------------------------------------- >> %~dp0\ProductKeys.txt
 
 
 :installcomplete
@@ -70,17 +70,12 @@ echo  ---------------------------
 echo   Saved to ProductKeys.txt
 echo.
 echo.
-echo.
-echo.
-echo          u\OSKey 
-echo         -userjosh
-echo.
-echo.
-echo.
-echo.
 echo    Product-Key Exctacted!
 echo.
 echo.
 echo   Press any key to close...
+echo.
+echo  github.com/twituserjosh/uOSKey
+echo.
 pause >nul
 cls
